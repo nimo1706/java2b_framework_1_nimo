@@ -29,7 +29,7 @@ public class MyFifthPraController {
 		} else {
 
 		}
-		
+
 		System.out.println(like);
 		model.addAttribute("likefood", like);
 

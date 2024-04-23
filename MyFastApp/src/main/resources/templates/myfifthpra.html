@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
 </head>
+
 <body>
 	テストだおっよおおおおおおおおおおおおおおおお
 	<p th:text="${modelpra}"></p>
-	
-	
+
+
 	<form th:action="@{/fifthpra}" method="POST">
 		好きな食べ物は?<br>
 		<input type="text" name="like"><br>
@@ -19,6 +21,7 @@
 
 	<p th:text="${likefood}"></p><br>
 	<br>
-	
+
 </body>
+
 </html>
