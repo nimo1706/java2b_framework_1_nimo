@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class MyFirstController {
 
+	
+	
 	@RequestMapping(path = "/firstpage2", method = RequestMethod.GET)
 	public String first() {
 		return "myfirst";
