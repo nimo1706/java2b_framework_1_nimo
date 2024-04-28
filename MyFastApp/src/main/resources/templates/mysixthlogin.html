@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	
+	<form th:action="@{/sixthlogin}" method="POST">
+        <input type="text" name="id">
+        <input type="text" name="pass">
+        <input type="submit" value="送信">
+    </form>
+    テスト
+    <p th:text="${result}"></p>
+</body>
+
+</html>
