@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" type="text/css" href="css/userhome.css">
+	<script type="text/javascript" src="js/userhome.js"></script>
+</head>
+
+<body>
+
+
+	<form th:action="@{/userHome}" method="POST">
+
+		ホーム
+
+		<p>ようこそ <span th:text="${username}"></span> さん</p>
+
+		<br><br>
+
+		つぶやく<br>
+		<input type="text" name="tweet" value=""><br>
+
+		<input type="submit" value="投稿">
+
+	</form>
+
+	<p th:text="${tweetresult}"></p>
+
+	<br><br><br>
+
+	<p><a href="http://localhost:8080/userLogin">ログインページ</a></p>
+
+
+</body>
+
+</html>

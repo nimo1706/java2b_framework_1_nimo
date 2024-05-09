@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" type="text/css" href="css/userhome.css">
+
+</head>
+
+<body>
+
+
+	<form th:action="@{/userLogin}" method="POST">
+
+		ログイン
+
+		ID
+		<input type="text" name="id"><br>
+
+		パスワード
+		<input type="text" name="pass"><br>
+
+		<input type="submit" value="ログイン">
+
+	</form>
+
+	<p th:text="${loginresult}"></p>
+
+
+</body>
+
+</html>
