@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+
+	<!--ホーム画面-->
+	<h4>操作を入力してください</h4>
+	<form th:action="@{/zasekiyoyaku}" method="POST">
+		<input type="text" name="operation"><br>
+		<input type="submit" value="送信">
+	</form>
+	
+	<p th:text="${'画面から入力された'+session.yoyakunumber +'をセッションに格納しました。'}"></p>
+
+
+	<!--「予約」が入力された場合-->
+	<th:block th:if="${session.op == '予約'}">
+
+		<h4>予約したい座席番号を1～10で入力してください</h4>
+
+		<form th:action="@{/zasekiyoyaku}" method="POST">
+			<input type="text" name="yoyakunumber"><br>
+			<input type="submit" value="送信">
+		</form>
+
+		<p th:text="${'画面から入力された'+session.yoyakunumber +'をセッションに格納しました。'}"></p>
+
+	</th:block>
+
+	<!--「参照」が入力された場合-->
+	<th:block th:unless="${session.op == '参照'}"></th:block>
+	</p>
+
+</body>
+
+</html>
